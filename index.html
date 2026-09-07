@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sites Pro Saint-Michel — Site livré en 24h</title>
+  <meta name="description" content="Site pro livré en 24h — Création de site vitrine avec WhatsApp direct." />
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="theme-color" content="#0b6b4f" />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo-placeholder">SM</div>
+        <div>
+          <h1>Sites Pro Saint-Michel</h1>
+          <p class="tagline">250$ — livré en 24h · WhatsApp direct</p>
+        </div>
+      </div>
+      <a class="btn-whatsapp" id="top-whatsapp" href="https://wa.me/237656864505?text=Bonjour%2C+je+veux+mon+site+pro+Saint-Michel" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h2>Ton site pro livré en 24h</h2>
+          <p>Site vitrine responsive — présentation, services, contact. Parfait pour commerces locaux (barbershop, restaurant, magasin...).</p>
+          <div class="actions">
+            <a class="btn-primary" href="https://wa.me/237656864505?text=Bonjour%2C+je+veux+mon+site+pro+Saint-Michel" target="_blank" rel="noopener">WhatsApp maintenant</a>
+            <a class="btn-secondary" href="#exemples">Voir exemple</a>
+            <button id="open-chat" class="btn-chat">Parler au robot</button>
+          </div>
+          <ul class="features">
+            <li>Livraison 24h</li>
+            <li>Optimisé mobile</li>
+            <li>WhatsApp direct</li>
+            <li>SEO basique inclus</li>
+          </ul>
+        </div>
+        <div class="hero-image">
+          <div class="device-mock">Image / Logo</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="exemples" class="section container">
+      <h3>Ce que tu obtiens</h3>
+      <ul class="cards">
+        <li class="card">
+          <h4>Page d'accueil</h4>
+          <p>Titre, accroche, services, CTA WhatsApp.</p>
+        </li>
+        <li class="card">
+          <h4>Page À propos</h4>
+          <p>Texte sur ton commerce, horaires, adresse.</p>
+        </li>
+        <li class="card">
+          <h4>Contact</h4>
+          <p>WhatsApp direct + formulaire (optionnel).</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section alt container">
+      <h3>Tarif</h3>
+      <p class="lead">250$ — site complet livré en 24 heures.</p>
+      <p>Je fournis : code statique + instructions de déploiement. Hébergement et domaine non inclus.</p>
+    </section>
+
+    <section id="contact" class="section container">
+      <h3>Contact rapide</h3>
+      <p>WhatsApp direct : <a href="https://wa.me/237656864505?text=Bonjour%2C+je+veux+mon+site+pro+Saint-Michel" target="_blank" rel="noopener">+237 656 86 4505</a></p>
+      <p>Ou remplis ce court message :</p>
+      <form onsubmit="event.preventDefault(); window.open('https://wa.me/237656864505?text=' + encodeURIComponent(document.getElementById('msg').value));">
+        <textarea id="msg" placeholder="Nom, commerce, message"></textarea>
+        <button class="btn-primary" type="submit">Envoyer via WhatsApp</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© Sites Pro Saint-Michel — Livraison 24h · <a href="https://wa.me/237656864505" target="_blank" rel="noopener">WhatsApp</a></p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp button -->
+  <a class="floating-whatsapp" href="https://wa.me/237656864505?text=Bonjour%2C+je+veux+mon+site+pro+Saint-Michel" target="_blank" rel="noopener" aria-label="WhatsApp">
+    💬
+  </a>
+
+  <!-- Chat widget root -->
+  <div id="chat-root" class="chat-root hidden" aria-live="polite">
+    <div class="chat-header">
+      <span>Assistant Sites Pro</span>
+      <button id="close-chat" aria-label="Fermer">✕</button>
+    </div>
+    <div id="chat-body" class="chat-body"></div>
+    <form id="chat-form" class="chat-form">
+      <input id="chat-input" placeholder="Écris ton message..." autocomplete="off" />
+      <button type="submit">Envoyer</button>
+    </form>
+  </div>
+
+  <script src="chat.js"></script>
+</body>
+</html>
